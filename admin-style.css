@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 :root {
     --primary-color: #003d99;
     --secondary-color: #0056cc;
@@ -24,6 +35,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f7fa;
     color: var(--dark);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* ============ Admin Container ============ */
@@ -55,19 +69,13 @@ body {
 
 .sidebar-header i {
     font-size: 28px;
-    background: linear-gradient(90deg, #ff0000 0%, #0056cc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--white);
 }
 
 .sidebar-header h2 {
     font-size: 18px;
     font-weight: 600;
-    background: linear-gradient(90deg, #ff0000 0%, #0056cc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--white);
 }
 
 .sidebar-nav ul {
@@ -733,6 +741,10 @@ td a:hover {
 
     .main-content {
         margin-left: 180px;
+        padding: 15px;
+        width: calc(100vw - 180px);
+        max-width: calc(100vw - 180px);
+        overflow-x: hidden;
     }
 
     section {
@@ -766,5 +778,11 @@ td a:hover {
     .detail-row {
         grid-template-columns: 1fr;
         gap: 5px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
