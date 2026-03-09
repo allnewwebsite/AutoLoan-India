@@ -57,14 +57,24 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: var(--primary-color);
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.logo span {
+    background: linear-gradient(90deg, #ff0000 0%, #0056cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .logo i {
     font-size: 28px;
+    background: linear-gradient(90deg, #ff0000 0%, #0056cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav-links {

@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFirebase();
     loadLeads();
     updateDashboard();
-    console.log('%cAutoLoan Admin Panel Loaded', 'color: #003d99; font-size: 16px; font-weight: bold;');
+    console.log('%cCarLoanIndia Admin Panel Loaded', 'color: #003d99; font-size: 16px; font-weight: bold;');
 });
 
 function initFirebase() {
