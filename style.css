@@ -627,7 +627,7 @@ section h2 {
 .after-apply-header {
     position: relative;
     padding: 0;
-    height: 320px;
+    height: clamp(180px, 30vw, 260px);
     overflow: hidden;
 }
 
@@ -897,8 +897,8 @@ section h2 {
     }
 
     .after-apply-header {
-        height: auto;
-        min-height: 380px;
+        height: 210px;
+        min-height: 0;
     }
 
     .after-apply-header-overlay h2 {
@@ -953,7 +953,8 @@ section h2 {
     }
 
     .after-apply-header {
-        min-height: 320px;
+        height: 170px;
+        min-height: 0;
     }
 
     .after-apply-header-overlay h2 {
