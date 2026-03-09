@@ -121,6 +121,8 @@ document.getElementById('loanForm').addEventListener('submit', function(e) {
         carPrice: document.getElementById('carPrice').value,
         loanAmount: document.getElementById('loanAmountForm').value,
         preferredBank: document.getElementById('preferredBank').value,
+        salaryAmount: document.getElementById('salaryAmount').value || '',
+        businessIncome: document.getElementById('businessIncome').value || '',
         timestamp: new Date().toLocaleString('en-IN'),
         leadId: generateLeadId()
     };
@@ -207,6 +209,19 @@ function validateFormData(data) {
         return false;
     }
 
+    // Validate income based on employment type
+    if (data.employmentType === 'Salaried') {
+        if (!data.salaryAmount || parseFloat(data.salaryAmount) <= 0) {
+            alert('Please enter a valid salary amount');
+            return false;
+        }
+    } else if (data.employmentType === 'Self Employed') {
+        if (!data.businessIncome || parseFloat(data.businessIncome) <= 0) {
+            alert('Please enter a valid average monthly business income');
+            return false;
+        }
+    }
+
     return true;
 }
 
@@ -268,6 +283,10 @@ function resetForm() {
 
 // ============ Send WhatsApp Notification ============
 function sendWhatsAppNotification(formData) {
+    const incomeInfo = formData.employmentType === 'Salaried' 
+        ? `Salary: ₹${formatAmount(formData.salaryAmount)}`
+        : `Business Income: ₹${formatAmount(formData.businessIncome)}`;
+    
     const message = `New Car Loan Lead:\n
 Name: ${formData.fullName}
 Mobile: ${formData.mobileNumber}
@@ -277,6 +296,7 @@ Car Price: ₹${formatAmount(formData.carPrice)}
 Loan Amount: ₹${formatAmount(formData.loanAmount)}
 Bank: ${formData.preferredBank}
 Employment: ${formData.employmentType}
+${incomeInfo}
 Lead ID: ${formData.leadId}`;
 
     // Log the message (WhatsApp would require backend API for automated sending)
@@ -295,6 +315,34 @@ window.addEventListener('load', function() {
 document.getElementById('loanAmount').addEventListener('input', calculateEMI);
 document.getElementById('interestRate').addEventListener('input', calculateEMI);
 document.getElementById('tenure').addEventListener('input', calculateEMI);
+
+// ============ Employment Type Toggle ============
+function toggleIncomeFields() {
+    const employmentType = document.getElementById('employmentType').value;
+    const salaryAmountGroup = document.getElementById('salaryAmountGroup');
+    const businessIncomeGroup = document.getElementById('businessIncomeGroup');
+    const salaryInput = document.getElementById('salaryAmount');
+    const businessInput = document.getElementById('businessIncome');
+
+    if (employmentType === 'Salaried') {
+        salaryAmountGroup.style.display = 'block';
+        businessIncomeGroup.style.display = 'none';
+        salaryInput.removeAttribute('disabled');
+        businessInput.setAttribute('disabled', 'disabled');
+    } else if (employmentType === 'Self Employed') {
+        salaryAmountGroup.style.display = 'none';
+        businessIncomeGroup.style.display = 'block';
+        salaryInput.setAttribute('disabled', 'disabled');
+        businessInput.removeAttribute('disabled');
+    } else {
+        salaryAmountGroup.style.display = 'none';
+        businessIncomeGroup.style.display = 'none';
+        salaryInput.setAttribute('disabled', 'disabled');
+        businessInput.setAttribute('disabled', 'disabled');
+    }
+}
+
+document.getElementById('employmentType').addEventListener('change', toggleIncomeFields);
 
 // ============ Mobile Menu Toggle ============
 const hamburger = document.querySelector('.hamburger');

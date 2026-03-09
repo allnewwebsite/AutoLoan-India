@@ -734,61 +734,6 @@ section h2 {
     }
 }
 
-/* ============ Contact Section ============ */
-.contact-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: var(--white);
-}
-
-.contact-section h2 {
-    color: var(--white);
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.contact-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s;
-}
-
-.contact-card:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-8px);
-}
-
-.contact-card i {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.contact-card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.contact-card a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 16px;
-    transition: opacity 0.3s;
-}
-
-.contact-card a:hover {
-    opacity: 0.8;
-}
-
 /* ============ Footer ============ */
 .footer {
     background-color: var(--text-dark);
@@ -836,35 +781,6 @@ section h2 {
     padding-top: 20px;
     border-top: 1px solid #495057;
     font-size: 14px;
-}
-
-/* ============ Floating WhatsApp Button ============ */
-.whatsapp-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    box-shadow: var(--shadow-lg);
-    transition: all 0.3s;
-    z-index: 999;
-    text-decoration: none;
-}
-
-.whatsapp-btn:hover {
-    background-color: #20b85e;
-    transform: scale(1.1);
-}
-
-.whatsapp-btn:active {
-    transform: scale(0.95);
 }
 
 /* ============ Responsive Design ============ */
@@ -958,14 +874,6 @@ section h2 {
 
     .loan-form {
         padding: 20px;
-    }
-
-    .whatsapp-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        bottom: 20px;
-        right: 20px;
     }
 
     .footer-content {

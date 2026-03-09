@@ -390,6 +390,10 @@ function viewLead(leadId) {
             <div class="detail-value">${lead.employmentType}</div>
         </div>
         <div class="detail-row">
+            <div class="detail-label">${lead.employmentType === 'Salaried' ? 'Salary Amount' : 'Average Monthly Business Income'}:</div>
+            <div class="detail-value">₹${lead.employmentType === 'Salaried' ? formatAmount(lead.salaryAmount || '0') : formatAmount(lead.businessIncome || '0')}</div>
+        </div>
+        <div class="detail-row">
             <div class="detail-label">Car Type:</div>
             <div class="detail-value">${lead.carType}</div>
         </div>
