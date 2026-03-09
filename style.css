@@ -626,8 +626,11 @@ section h2 {
 /* ============ After Apply Header ============ */
 .after-apply-header {
     position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 0;
-    height: clamp(180px, 30vw, 260px);
+    height: 350px;
     overflow: hidden;
 }
 
@@ -642,6 +645,7 @@ section h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
     opacity: 0;
     transition: opacity 0.9s ease;
@@ -897,12 +901,12 @@ section h2 {
     }
 
     .after-apply-header {
-        height: 210px;
-        min-height: 0;
+        height: 250px;
+        max-width: 100%;
     }
 
     .after-apply-header-overlay h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .callback-note {
@@ -953,12 +957,15 @@ section h2 {
     }
 
     .after-apply-header {
-        height: 170px;
-        min-height: 0;
+        height: 200px;
+    }
+
+    .after-apply-slide {
+        object-fit: contain;
     }
 
     .after-apply-header-overlay h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .btn {
