@@ -93,6 +93,20 @@ function initHeroSlider() {
     }, 4000);
 }
 
+function initAfterApplySlider() {
+    const slides = document.querySelectorAll('.after-apply-slide');
+    if (!slides.length) {
+        return;
+    }
+
+    let currentIndex = 0;
+    setInterval(function() {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }, 3500);
+}
+
 // ============ Form Submission ============
 document.getElementById('loanForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -274,6 +288,7 @@ Lead ID: ${formData.leadId}`;
 window.addEventListener('load', function() {
     calculateEMI(); // Show default EMI calculation
     initHeroSlider();
+    initAfterApplySlider();
 });
 
 // ============ Real-time EMI Calculation ============

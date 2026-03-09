@@ -623,6 +623,52 @@ section h2 {
     margin-bottom: 15px;
 }
 
+/* ============ After Apply Header ============ */
+.after-apply-header {
+    position: relative;
+    padding: 0;
+    height: 320px;
+    overflow: hidden;
+}
+
+.after-apply-slides {
+    position: absolute;
+    inset: 0;
+}
+
+.after-apply-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+.after-apply-slide.active {
+    opacity: 1;
+}
+
+.after-apply-header-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(0, 30, 78, 0.5) 0%, rgba(0, 30, 78, 0.35) 50%, rgba(0, 30, 78, 0.5) 100%);
+}
+
+.after-apply-header-overlay h2 {
+    color: var(--white);
+    font-size: 34px;
+    margin: 0;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+}
+
 /* ============ Callback Note Section ============ */
 .callback-note-section {
     padding: 10px 0 0;
@@ -850,6 +896,15 @@ section h2 {
         grid-template-columns: 1fr;
     }
 
+    .after-apply-header {
+        height: auto;
+        min-height: 380px;
+    }
+
+    .after-apply-header-overlay h2 {
+        font-size: 28px;
+    }
+
     .callback-note {
         font-size: 14px;
         padding: 12px 14px;
@@ -895,6 +950,14 @@ section h2 {
 
     .hero-content p {
         font-size: 14px;
+    }
+
+    .after-apply-header {
+        min-height: 320px;
+    }
+
+    .after-apply-header-overlay h2 {
+        font-size: 22px;
     }
 
     .btn {
