@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLoan India - Get Car Loan in 24 Hours</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLoan India</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#banks">Banks</a></li>
+                <li><a href="#calculator">EMI Calculator</a></li>
+                <li><a href="#apply">Apply Now</a></li>
+                <li><a href="admin-login.html" style="color: #dc3545; font-weight: bold;">Admin</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slides" aria-hidden="true">
+            <img src="cars/img1.jpg" alt="" class="hero-slide active">
+            <img src="cars/img%201.jpeg" alt="" class="hero-slide hero-slide-img--wide">
+            <img src="cars/WhatsApp%20Image%202026-02-16%20at%2010.44.00%20PM.jpeg" alt="" class="hero-slide">
+        </div>
+        <div class="hero-content">
+            <h1>Get Car Loan Approval in 24 Hours</h1>
+            <p>Fast, Easy & Hassle-Free Car Financing from India's Top Banks</p>
+            <button class="btn btn-primary" onclick="scrollToApply()">Apply Now</button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <h2>Why Choose AutoLoan India?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Approval</h3>
+                    <p>Get approval in just 24 hours</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-percent"></i>
+                    <h3>Lowest Interest Rate</h3>
+                    <p>Competitive rates from top banks</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-building"></i>
+                    <h3>All Banks Available</h3>
+                    <p>Compare and choose from 10+ banks</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file"></i>
+                    <h3>Minimum Documents</h3>
+                    <p>Simple documentation process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="offer-banner">
+        <div class="container">
+            <div class="offer-content">
+                <h2>💰 No Hidden Charges • Starting from 7.65% ROI</h2>
+                <p>We process your car loan with <strong>ZERO extra charges</strong> and the <strong>LOWEST interest rates</strong> in the market. Get transparent, hassle-free financing today!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banks Section -->
+    <section id="banks" class="banks-section">
+        <div class="container">
+            <h2>“We help you connect with trusted banks and financial institutions for car loan options.”</h2>
+            <div class="interest-rate-card" aria-label="Interest rate information">
+                <p class="interest-rate-line">Interest rates starting from 7.65 % p.a.* depending on bank policies and customer eligibility.</p>
+                <p class="interest-rate-disclaimer">*Interest rates may vary depending on the bank, credit score, and loan amount.</p>
+            </div>
+            <div class="banks-grid">
+                <div class="bank-card">
+                    <img src="logo/hdfc.png" alt="HDFC Bank" class="bank-logo-img">
+                    <h3>HDFC Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('HDFC Bank')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/icici.png" alt="ICICI Bank" class="bank-logo-img">
+                    <h3>ICICI Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('ICICI Bank')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/sbi.png" alt="State Bank of India" class="bank-logo-img">
+                    <h3>State Bank of India</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('State Bank of India')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/axix.png" alt="Axis Bank" class="bank-logo-img">
+                    <h3>Axis Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('Axis Bank')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/kotak.png" alt="Kotak Mahindra Bank" class="bank-logo-img">
+                    <h3>Kotak Mahindra Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('Kotak Mahindra Bank')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/Bob.png" alt="Bank of Baroda" class="bank-logo-img">
+                    <h3>Bank of Baroda</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('Bank of Baroda')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/pnb.png" alt="Punjab National Bank" class="bank-logo-img">
+                    <h3>Punjab National Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('Punjab National Bank')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/idfc.jpg" alt="IDFC First Bank" class="bank-logo-img">
+                    <h3>IDFC First Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('IDFC First Bank')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/yes.jpg" alt="Yes Bank" class="bank-logo-img">
+                    <h3>Yes Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('Yes Bank')">Apply Now</button>
+                </div>
+                <div class="bank-card">
+                    <img src="logo/indusind.png" alt="IndusInd Bank" class="bank-logo-img">
+                    <h3>IndusInd Bank</h3>
+                    <button class="btn btn-secondary" onclick="selectBank('IndusInd Bank')">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMI Calculator -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2>EMI Calculator</h2>
+            <div class="calculator-wrapper">
+                <div class="calculator-input">
+                    <div class="input-group">
+                        <label for="loanAmount">Loan Amount (₹)</label>
+                        <input type="number" id="loanAmount" placeholder="Enter Loan Amount" value="500000">
+                    </div>
+                    <div class="input-group">
+                        <label for="interestRate">Interest Rate (% p.a.)</label>
+                        <input type="number" id="interestRate" placeholder="Enter Interest Rate" value="8.5" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="tenure">Tenure (Months)</label>
+                        <input type="number" id="tenure" placeholder="Enter Tenure in Months" value="60" min="6" max="84">
+                    </div>
+                    <button class="btn btn-primary" onclick="calculateEMI()">Calculate EMI</button>
+                </div>
+                <div class="calculator-result">
+                    <div class="result-card">
+                        <h4>Monthly EMI</h4>
+                        <p class="result-value" id="emiResult">₹ 0</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>Total Interest</h4>
+                        <p class="result-value" id="interestResult">₹ 0</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>Total Payment</h4>
+                        <p class="result-value" id="totalResult">₹ 0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Required -->
+    <section id="documents" class="documents-section">
+        <div class="container">
+            <h2>Documents Required</h2>
+            <div class="documents-grid">
+                <div class="doc-card">
+                    <i class="fas fa-id-card"></i>
+                    <h3>Aadhaar Card</h3>
+                    <p>Original Aadhaar Card with current address</p>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-file"></i>
+                    <h3>PAN Card</h3>
+                    <p>Permanent Account Number Card</p>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-money-check"></i>
+                    <h3>Salary Slip / ITR</h3>
+                    <p>Last 3 months salary slip or ITR</p>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-bank"></i>
+                    <h3>Bank Statement</h3>
+                    <p>Last 3-6 months bank statement</p>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Address Proof</h3>
+                    <p>Utility bill, Rent agreement, or Property Paper</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Form Section -->
+    <section id="apply" class="apply-section">
+        <div class="container">
+            <h2>Apply for Car Loan</h2>
+            <div class="form-wrapper">
+                <form id="loanForm" class="loan-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileNumber">Mobile Number *</label>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="10-digit number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="employmentType">Employment Type *</label>
+                            <select id="employmentType" name="employmentType" required>
+                                <option value="">Select Employment Type</option>
+                                <option value="Salaried">Salaried</option>
+                                <option value="Self Employed">Self Employed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="carType">Car Type *</label>
+                            <select id="carType" name="carType" required>
+                                <option value="">Select Car Type</option>
+                                <option value="New">New</option>
+                                <option value="Used">Used</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="carPrice">Car Price (₹) *</label>
+                            <input type="number" id="carPrice" name="carPrice" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="loanAmountForm">Loan Amount Required (₹) *</label>
+                            <input type="number" id="loanAmountForm" name="loanAmountForm" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredBank">Preferred Bank *</label>
+                            <select id="preferredBank" name="preferredBank" required>
+                                <option value="">Select Bank</option>
+                                <option value="HDFC Bank">HDFC Bank</option>
+                                <option value="ICICI Bank">ICICI Bank</option>
+                                <option value="State Bank of India">State Bank of India</option>
+                                <option value="Axis Bank">Axis Bank</option>
+                                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                                <option value="Bank of Baroda">Bank of Baroda</option>
+                                <option value="Punjab National Bank">Punjab National Bank</option>
+                                <option value="IDFC First Bank">IDFC First Bank</option>
+                                <option value="Yes Bank">Yes Bank</option>
+                                <option value="IndusInd Bank">IndusInd Bank</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            I agree to the Terms & Conditions and Privacy Policy
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Apply for Loan</button>
+                </form>
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Application Submitted Successfully!</h3>
+                        <p>Thank you for your application. Our loan specialist will contact you within 24 hours.</p>
+                        <button class="btn btn-secondary" onclick="resetForm()">Submit Another Application</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="callback-note-section">
+        <div class="container">
+            <p class="callback-note">After submitting your application, AutoLoan India Team will contact you shortly.</p>
+        </div>
+    </section>
+
+    <!-- Happy Customers Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>Trusted by Thousands of Happy Customers</h2>
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <img src="logo/avatar-rahul.svg" alt="Rahul Sharma" class="testimonial-avatar">
+                    <h3>Rahul Sharma</h3>
+                    <p class="testimonial-city">Delhi</p>
+                    <div class="testimonial-stars" aria-label="5 star rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-review">The team made my auto loan approval easy and transparent. I received quick support and everything was completed smoothly.</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <img src="logo/avatar-amit.svg" alt="Amit Verma" class="testimonial-avatar">
+                    <h3>Amit Verma</h3>
+                    <p class="testimonial-city">Gurgaon</p>
+                    <div class="testimonial-stars" aria-label="5 star rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-review">Great experience from start to finish. My loan was approved on time and the process was handled in a very professional way.</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <img src="logo/avatar-priya.svg" alt="Priya Gupta" class="testimonial-avatar">
+                    <h3>Priya Gupta</h3>
+                    <p class="testimonial-city">Noida</p>
+                    <div class="testimonial-stars" aria-label="5 star rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-review">Very clear communication and fast updates throughout. The approval process felt simple, and I got my car loan without stress.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About AutoLoan India</h4>
+                    <p>We connect car buyers with India's top banks to get the best car loan rates and approval in 24 hours.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#banks">Banks</a></li>
+                        <li><a href="#calculator">EMI Calculator</a></li>
+                        <li><a href="#apply">Apply Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AutoLoan India. All rights reserved. | Helping you get the best car loan in 24 hours!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase (Compat for global firebase object used in script.js) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+    <!-- Main Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

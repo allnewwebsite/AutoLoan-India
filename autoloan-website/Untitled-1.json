@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "leads": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["timestamp", "city", "bank"]
+    }
+  }
+}
